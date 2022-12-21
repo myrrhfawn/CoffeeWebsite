@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'coffee.apps.CoffeeConfig',
     'rest_framework',
+    'frontend',
 ]
 
 MIDDLEWARE = [

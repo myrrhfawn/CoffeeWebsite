@@ -23,7 +23,9 @@ from coffee.views import DrinkAPIView, VarietyAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('coffee.urls')),
+    path('test/', include('coffee.urls')),
+    path('', include('frontend.urls')),
+
     path('api/drinklist/', DrinkAPIView.as_view()),
     path('api/varietylist/', VarietyAPIView.as_view()),
 
