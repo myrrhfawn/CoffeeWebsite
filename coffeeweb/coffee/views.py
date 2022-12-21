@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from .models import *
 
 
-
+#test views
 def index(request):
     varts = Variety.objects.all()
     drinks = Drink.objects.all()
@@ -15,6 +15,10 @@ def index(request):
                'varts': varts,
                'drinks': drinks}
     return render(request, 'coffee/index.html', context=context)
+
+#end test
+
+
 
 class DrinkAPIView(generics.ListAPIView):
     queryset = Drink.objects.all()
