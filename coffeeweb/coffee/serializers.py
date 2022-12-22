@@ -10,3 +10,4 @@ class VarietySerializer(serializers.ModelSerializer):
     class Meta:
         model = Drink
         fields = ('title', 'description')
+
