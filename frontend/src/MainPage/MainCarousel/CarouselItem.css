@@ -1,7 +1,40 @@
 .item-container {
     display: flex;
+    width: 95%;
     justify-content: space-between;
     align-items: center;
+
+}
+
+
+
+.upper-text-container {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 7px;
+
+}
+
+.upper-text-line {
+    height: 2px;
+    width: 30px;
+    background-color: white;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.upper-text {
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.item-title {
+    font-size: 54px;
+    font-weight: 405;
+    word-spacing: 1px;
+    margin-bottom: 50px;
 
 }
 
@@ -10,13 +43,9 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 17px;
+    margin-bottom: 25px;
 
 }
-
-.item-title {
-    font-size: 50px;
-}
-
 
 .item-button {
     height: 50px;
@@ -24,10 +53,14 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 550;
     background-color: #3EB489;
     border-radius: 5px;
     border: 0px;
+}
+
+.item-image{
+    margin-right: 60px;
 }
 .image {
     display: flex;
