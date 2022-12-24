@@ -28,6 +28,7 @@ export const MainCarousel = ({children}) =>  {
     useEffect(() => {
         setPages(
             Children.map(children, child => {
+                debugger
                 return cloneElement(child, {
                     style: {
                         height: '100%',

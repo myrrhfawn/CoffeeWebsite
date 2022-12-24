@@ -5,7 +5,6 @@ import MainPageContent from "./MainPage/MainPageContent.js";
 
 
 function App() {
-
   return (
     <div className="wrapper">
       <div className="main_page">
