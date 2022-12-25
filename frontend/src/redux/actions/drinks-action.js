@@ -5,9 +5,8 @@ export function drinksFetchDataSuccess(drinks){
     }
 };
 
-export function drinksFetchData(url){
-    
-
+export function drinksFetchData(){
+    const url = "http://localhost:8000/api/drinklist/";
     return (dispatch) => {
         fetch(url)
         .then(response => {

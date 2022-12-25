@@ -1,6 +1,5 @@
 import React from "react";
 import "./CarouselItem.css"
-import image from "../images/ChestnutPralineLatte.png"
 
 export const CarouselItem = (props) => {
 

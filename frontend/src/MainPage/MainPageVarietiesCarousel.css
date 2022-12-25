@@ -1,6 +1,8 @@
 .carousel-container {
     margin: 0 auto;
     height: 600px;
+    z-index: 1;
+
 }
 .item {
     display: flex;
@@ -22,5 +24,9 @@
 }
 
 .item-4 {
-    background-color: blue;
+    background-color: gray;
+}
+
+.item-5 {
+    background-color: pink;
 }

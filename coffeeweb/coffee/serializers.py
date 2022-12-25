@@ -9,5 +9,5 @@ class DrinkSerializer(serializers.ModelSerializer):
 class VarietySerializer(serializers.ModelSerializer):
     class Meta:
         model = Drink
-        fields = ('title', 'description')
+        fields = ('title', 'image', 'description')
 

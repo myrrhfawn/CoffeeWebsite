@@ -1,33 +1,39 @@
 import React, { Children, cloneElement, useEffect, useState } from "react";
-import "./MainCarousel.css";
+import "./VarietiesCarousel.css";
 import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
 
-const PAGE_WIDTH = 1200;
+const PAGE_WIDTH = 269;
 
-export const MainCarousel = ({children}) =>  {
+export const VarietiesCarousel = ({children}) =>  {
     const [pages, setPages] = useState([]);
-    const [offset, setOffset] = useState(-PAGE_WIDTH);
+    const [offset, setOffset] = useState(0);
 
 
     const handleLeftArrowClick = () => {
         setOffset((currentOffset) => {
             const newOffset = currentOffset + PAGE_WIDTH;
-            return Math.min(newOffset, 0);
+            if(newOffset > 0){
+                return currentOffset - PAGE_WIDTH* (pages.length - 4);
+            }
+            return newOffset;
         })
     }
 
     const handleRightArrowClick = () => {
         setOffset((currentOffset) => {
             const newOffset = currentOffset - PAGE_WIDTH;
-            const maxOffset = -(PAGE_WIDTH * (pages.length - 1));
-            return Math.max(newOffset, maxOffset);
+            const maxOffset = -(PAGE_WIDTH * (pages.length - 4));
+            if(newOffset < maxOffset){
+                return currentOffset + PAGE_WIDTH * (pages.length - 4);
+            }
+            return newOffset;
+            /*return Math.max(newOffset, maxOffset);*/
         })
     }
 
     useEffect(() => {
         setPages(
             Children.map(children, child => {
-                 console.log("11")
                 return cloneElement(child, {
                     style: {
                         height: '100%',
