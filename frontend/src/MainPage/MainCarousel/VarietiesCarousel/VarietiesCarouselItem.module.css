@@ -1,0 +1,46 @@
+.item_container {
+    width: 95%;
+    align-items: center;
+
+}
+
+.item_content {
+    text-align: center;
+}
+
+
+
+.item_title {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #3B3B3B;
+
+}
+
+.item_description {
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    color: #6F7378;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 25px;
+
+}
+
+.item_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image {
+    
+    height:240px;
+    border-radius: 50%;
+}
+
+
+

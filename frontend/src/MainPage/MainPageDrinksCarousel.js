@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from "react";
-import {DrinksCarousel} from "./MainCarousel/DrinksCarousel.js"
-import {CarouselItem} from "./MainCarousel/CarouselItem.js"
+import {DrinksCarousel} from "./MainCarousel/DrinksCarousel/DrinksCarousel.js"
+import {DrinksCarouselItem} from "./MainCarousel/DrinksCarousel/DrinksCarouselItem.js"
 import "./MainPageDrinksCarousel.css"
 import { connect } from "react-redux";
-import { drinksFetchData } from "../redux/actions/drinks-action";
+import { FetchData } from "../redux/actions/drinks-action";
 
 
 function MainPageDrinksCarousel({fetchData, drinks}) {  
     const [rerender, setRerender] = useState(false);
 
     useEffect(() => {
-        fetchData()
+        fetchData("drinklist")
     }, []);
 
     useEffect(() => {
         setRerender(!rerender);
     }, [drinks])
-
     return(
         <div className="main_content">
-            <div className="carousel-container">
+            <div className="drinks_carousel_container">
                 <DrinksCarousel>
                     {drinks.map((drink, index) => {
-                        return <div key={index} className="item"><CarouselItem drink={drink} /></div>
+                        return <div key={index} className="drink_item"><DrinksCarouselItem drink={drink} /></div>
                     })}
 
                    {/*<div className="item"><CarouselItem /></div>*/}
@@ -40,7 +39,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchData: () => dispatch(drinksFetchData())
+        fetchData: (type) => dispatch(FetchData(type))
     };
 }
 

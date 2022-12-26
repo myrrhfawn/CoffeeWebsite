@@ -1,25 +1,48 @@
-import React from "react";
-import {VarietiesCarousel} from "./MainCarousel/VarietiesCarousel.js"
-import {CarouselItem} from "./MainCarousel/CarouselItem.js"
+import React, { useEffect, useState } from "react";
+import {VarietiesCarousel} from "./MainCarousel/VarietiesCarousel/VarietiesCarousel.js"
+import {VarietiesCarouselItem} from "./MainCarousel/VarietiesCarousel/VarietiesCarouselItem.js"
 import "./MainPageVarietiesCarousel.css"
+import { connect } from "react-redux";
+import { FetchData } from "../redux/actions/drinks-action";
 
 
-function MainPageVarietiesCarousel() {  
+function MainPageVarietiesCarousel({fetchData, varieties}) {  
+    const [rerender, setRerender] = useState(false);
+
+    useEffect(() => {
+        fetchData("varietylist")
+    }, []);
+
+    useEffect(() => {
+        setRerender(!rerender);
+    }, [varieties])
+
+    console.log(varieties);
 
     return(
         <div className="main_content">
-            <div className="carousel-container">
+            <div className="variety_carousel_container">
                 <VarietiesCarousel>
-                    <div className="item item-1">Item1</div>
-                    <div className="item item-2">Item2</div>
-                    <div className="item item-3">Item3</div>
-                    <div className="item item-4">Item4</div>
-                    <div className="item item-5">Item5</div>
-                    <div className="item item-5">Item5</div>
+                    {varieties.map((variety, index) => {
+                        return <div key={index} className="variety_item"><VarietiesCarouselItem variety={variety} /></div>
+                    })}
                 </VarietiesCarousel>
             </div>
         </div>
     )
 }
 
-export default MainPageVarietiesCarousel;
+
+const mapStateToProps = state => {
+    return {
+        varieties: state.varietiesReducer
+    };
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchData: (type) => dispatch(FetchData(type))
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainPageVarietiesCarousel);

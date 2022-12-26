@@ -1,17 +1,19 @@
-.carousel-container {
-    height: 150px;
+.carousel_container {
+    height: 100%;
     width: 1200px;
     display: flex;
     align-items: center;
+
 }
 
-.carousel-window {
+.carousel_window {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    display: flex;
 }
 
-.all-pages-container {
+.all_pages_container {
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -24,4 +26,5 @@
 .arrow {
     cursor: pointer;
     height: 60px;
+    color: #ABB0B8;
 }

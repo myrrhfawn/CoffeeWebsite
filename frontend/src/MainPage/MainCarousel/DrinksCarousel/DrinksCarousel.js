@@ -1,5 +1,5 @@
 import React, { Children, cloneElement, useEffect, useState } from "react";
-import "./DrinksCarousel.css";
+import s from "./DrinksCarousel.module.css";
 import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
 
 const PAGE_WIDTH = 1200;
@@ -41,16 +41,16 @@ export const DrinksCarousel = ({children}) =>  {
     
 
     return(
-        <div className="carousel-container">
-            <BiChevronLeftCircle size = '70' className="arrow" onClick={handleLeftArrowClick} />
-            <div className="carousel-window">
-                <div className="all-pages-container"
+        <div className={s.carousel_container}>
+            <BiChevronLeftCircle size = '70' className={s.arrow} onClick={handleLeftArrowClick} />
+            <div className={s.carousel_window}>
+                <div className={s.all_pages_container}
                 style={{
                     transform: `translateX(${offset}px)`,
                 }}>
                     {pages}</div>
             </div>
-            <BiChevronRightCircle size = '70' className="arrow" onClick={handleRightArrowClick} />
+            <BiChevronRightCircle size = '70' className={s.arrow} onClick={handleRightArrowClick} />
         </div>
     )
 }

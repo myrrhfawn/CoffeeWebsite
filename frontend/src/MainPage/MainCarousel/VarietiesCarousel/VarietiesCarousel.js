@@ -1,8 +1,8 @@
 import React, { Children, cloneElement, useEffect, useState } from "react";
-import "./VarietiesCarousel.css";
-import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
+import s from "./VarietiesCarousel.module.css";
+import { HiOutlineArrowCircleLeft, HiOutlineArrowCircleRight } from "react-icons/hi";
 
-const PAGE_WIDTH = 269;
+const PAGE_WIDTH = 1133;
 
 export const VarietiesCarousel = ({children}) =>  {
     const [pages, setPages] = useState([]);
@@ -11,9 +11,9 @@ export const VarietiesCarousel = ({children}) =>  {
 
     const handleLeftArrowClick = () => {
         setOffset((currentOffset) => {
-            const newOffset = currentOffset + PAGE_WIDTH;
+            const newOffset = currentOffset + PAGE_WIDTH/4;
             if(newOffset > 0){
-                return currentOffset - PAGE_WIDTH* (pages.length - 4);
+                return currentOffset - (PAGE_WIDTH/4)* (pages.length - 4);
             }
             return newOffset;
         })
@@ -21,10 +21,10 @@ export const VarietiesCarousel = ({children}) =>  {
 
     const handleRightArrowClick = () => {
         setOffset((currentOffset) => {
-            const newOffset = currentOffset - PAGE_WIDTH;
-            const maxOffset = -(PAGE_WIDTH * (pages.length - 4));
+            const newOffset = currentOffset - (PAGE_WIDTH/4);
+            const maxOffset = -((PAGE_WIDTH/4) * (pages.length - 4));
             if(newOffset < maxOffset){
-                return currentOffset + PAGE_WIDTH * (pages.length - 4);
+                return currentOffset + (PAGE_WIDTH/4) * (pages.length - 4);
             }
             return newOffset;
             /*return Math.max(newOffset, maxOffset);*/
@@ -37,8 +37,8 @@ export const VarietiesCarousel = ({children}) =>  {
                 return cloneElement(child, {
                     style: {
                         height: '100%',
-                        minWidth: `${PAGE_WIDTH}px`,
-                        maxWidth: `${PAGE_WIDTH}px`,
+                        minWidth: `${PAGE_WIDTH/4}px`,
+                        maxWidth: `${PAGE_WIDTH/4}px`,
                     }
                 })
             })
@@ -47,16 +47,16 @@ export const VarietiesCarousel = ({children}) =>  {
     
 
     return(
-        <div className="carousel-container">
-            <BiChevronLeftCircle size = '70' className="arrow" onClick={handleLeftArrowClick} />
-            <div className="carousel-window">
-                <div className="all-pages-container"
+        <div className={s.carousel_container}>
+            <HiOutlineArrowCircleLeft size = '35' className={s.arrow} onClick={handleLeftArrowClick} />
+            <div className={s.carousel_window}>
+                <div className={s.all_pages_container}
                 style={{
                     transform: `translateX(${offset}px)`,
                 }}>
                     {pages}</div>
             </div>
-            <BiChevronRightCircle size = '70' className="arrow" onClick={handleRightArrowClick} />
+            <HiOutlineArrowCircleRight size = '35' className={s.arrow} onClick={handleRightArrowClick} />
         </div>
     )
 }
