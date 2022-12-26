@@ -8,7 +8,6 @@ export const VarietiesCarousel = ({children}) =>  {
     const [pages, setPages] = useState([]);
     const [offset, setOffset] = useState(0);
 
-
     const handleLeftArrowClick = () => {
         setOffset((currentOffset) => {
             const newOffset = currentOffset + PAGE_WIDTH/4;
@@ -24,7 +23,8 @@ export const VarietiesCarousel = ({children}) =>  {
             const newOffset = currentOffset - (PAGE_WIDTH/4);
             const maxOffset = -((PAGE_WIDTH/4) * (pages.length - 4));
             if(newOffset < maxOffset){
-                return currentOffset + (PAGE_WIDTH/4) * (pages.length - 4);
+                console.log("returning new: " + newOffset);
+                return maxOffset + (PAGE_WIDTH/4) * (pages.length - 4);
             }
             return newOffset;
             /*return Math.max(newOffset, maxOffset);*/
@@ -45,6 +45,11 @@ export const VarietiesCarousel = ({children}) =>  {
         )
     }, [children]);
     
+    useEffect(() => {
+        setTimeout(() =>
+            handleRightArrowClick()
+        , 3500);
+      }, [offset]);
 
     return(
         <div className={s.carousel_container}>
