@@ -3,7 +3,7 @@ import {VarietiesCarousel} from "./MainCarousel/VarietiesCarousel/VarietiesCarou
 import {VarietiesCarouselItem} from "./MainCarousel/VarietiesCarousel/VarietiesCarouselItem.js"
 import "./MainPageVarietiesCarousel.css"
 import { connect } from "react-redux";
-import { FetchData } from "../redux/actions/drinks-action";
+import { VarietiesFetchData } from "../redux/reducers/mainpage-reducer";
 
 
 function MainPageVarietiesCarousel({fetchData, varieties}) {  
@@ -18,7 +18,6 @@ function MainPageVarietiesCarousel({fetchData, varieties}) {
     }, [varieties])
 
     console.log(varieties);
-
     return(
         <div className="main_content">
             <div className="variety_carousel_container">
@@ -34,14 +33,16 @@ function MainPageVarietiesCarousel({fetchData, varieties}) {
 
 
 const mapStateToProps = state => {
+    debugger
+
     return {
-        varieties: state.varietiesReducer
+        varieties: state.mainPageReducer.varieties
     };
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchData: (type) => dispatch(FetchData(type))
+        fetchData: () => dispatch(VarietiesFetchData())
     };
 }
 

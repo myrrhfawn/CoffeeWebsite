@@ -3,7 +3,7 @@ import {DrinksCarousel} from "./MainCarousel/DrinksCarousel/DrinksCarousel.js"
 import {DrinksCarouselItem} from "./MainCarousel/DrinksCarousel/DrinksCarouselItem.js"
 import "./MainPageDrinksCarousel.css"
 import { connect } from "react-redux";
-import { FetchData } from "../redux/actions/drinks-action";
+import { DrinksFetchData } from "../redux/reducers/mainpage-reducer";
 
 
 function MainPageDrinksCarousel({fetchData, drinks}) {  
@@ -33,13 +33,13 @@ function MainPageDrinksCarousel({fetchData, drinks}) {
 
 const mapStateToProps = state => {
     return {
-        drinks: state.drinksReducer
+        drinks: state.mainPageReducer.drinks
     };
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchData: (type) => dispatch(FetchData(type))
+        fetchData: () => dispatch(DrinksFetchData())
     };
 }
 

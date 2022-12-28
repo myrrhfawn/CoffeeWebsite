@@ -7,7 +7,7 @@ const PAGE_WIDTH = 1133;
 export const VarietiesCarousel = ({children}) =>  {
     const [pages, setPages] = useState([]);
     const [offset, setOffset] = useState(0);
-
+    
     const handleLeftArrowClick = () => {
         setOffset((currentOffset) => {
             const newOffset = currentOffset + PAGE_WIDTH/4;
@@ -45,11 +45,6 @@ export const VarietiesCarousel = ({children}) =>  {
         )
     }, [children]);
     
-    useEffect(() => {
-        setTimeout(() =>
-            handleRightArrowClick()
-        , 3500);
-      }, [offset]);
 
     return(
         <div className={s.carousel_container}>
