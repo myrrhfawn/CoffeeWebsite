@@ -1,0 +1,23 @@
+.handpicked_order_container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.handpicked_ordrder_image img{
+    height: 500px;
+}
+
+.handpicked_order_content {
+    background-image: url("./images/coffeebeans_background.png");
+    font-family: 'Montserrat', sans-serif;
+    color: #242424;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.handpicked_order_title {
+    font-weight: 600;
+    font-size: 40px;
+    width: 75%;
+}

@@ -10,7 +10,7 @@ function MainPageDrinksCarousel({fetchData, drinks}) {
     const [rerender, setRerender] = useState(false);
 
     useEffect(() => {
-        fetchData("drinklist")
+        fetchData()
     }, []);
 
     useEffect(() => {
@@ -23,8 +23,6 @@ function MainPageDrinksCarousel({fetchData, drinks}) {
                     {drinks.map((drink, index) => {
                         return <div key={index} className="drink_item"><DrinksCarouselItem drink={drink} /></div>
                     })}
-
-                   {/*<div className="item"><CarouselItem /></div>*/}
                 </DrinksCarousel>
             </div>
         </div>

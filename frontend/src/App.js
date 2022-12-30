@@ -3,6 +3,8 @@ import "./App.css"
 import MainPageNav from "./MainPage/MainPageNav.js";
 import MainPageDrinksCarousel from "./MainPage/MainPageDrinksCarousel.js";
 import MainPageVarietiesCarousel from "./MainPage/MainPageVarietiesCarousel.js";
+import Handpicked from "./MainPage/Handpicked";
+import HandpickedOrder from "./MainPage/HandpickedOrder";
 
 
 function App() {
@@ -13,9 +15,14 @@ function App() {
         <MainPageDrinksCarousel />
       </div>
       <div className="main_page_content">
-        <div className="content">
           <MainPageVarietiesCarousel />
-        </div>
+          <div className="handpicked_container">
+            <Handpicked />
+            
+          </div>
+          <div className="handpicked_order_container">
+            <HandpickedOrder />
+          </div>
       </div>
     </div>
   );

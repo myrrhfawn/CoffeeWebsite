@@ -10,14 +10,13 @@ function MainPageVarietiesCarousel({fetchData, varieties}) {
     const [rerender, setRerender] = useState(false);
 
     useEffect(() => {
-        fetchData("varietylist")
+        fetchData()
     }, []);
 
     useEffect(() => {
         setRerender(!rerender);
     }, [varieties])
 
-    console.log(varieties);
     return(
         <div className="main_content">
             <div className="variety_carousel_container">
@@ -33,8 +32,6 @@ function MainPageVarietiesCarousel({fetchData, varieties}) {
 
 
 const mapStateToProps = state => {
-    debugger
-
     return {
         varieties: state.mainPageReducer.varieties
     };

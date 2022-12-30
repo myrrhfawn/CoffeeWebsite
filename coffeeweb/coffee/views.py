@@ -15,4 +15,7 @@ class VarietyAPIView(generics.ListAPIView):
     queryset = Variety.objects.all()
     serializer_class = VarietySerializer
 
+class HandpickedAPIView(generics.ListAPIView):
+    queryset = Drink.objects.filter(is_handpicked=True)
+    serializer_class = DrinkSerializer
 

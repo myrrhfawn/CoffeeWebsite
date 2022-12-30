@@ -1,28 +1,49 @@
 import React, { Children, cloneElement, useEffect, useState } from "react";
-import s from "./DrinksCarousel.module.css";
+import s from "./HandpickedCarousel.module.css";
 import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
-
 const PAGE_WIDTH = 100;
 
-export const DrinksCarousel = ({children}) =>  {
+export const HandpickedCarousel = ({children}) =>  {
     const [pages, setPages] = useState([]);
-    const [offset, setOffset] = useState(-PAGE_WIDTH);
-
+    const [offset, setOffset] = useState(0);
+    const [swipe, setSwipe] = useState(false);
 
     const handleLeftArrowClick = () => {
         setOffset((currentOffset) => {
             const newOffset = currentOffset + PAGE_WIDTH;
-            return Math.min(newOffset, 0);
+            if(newOffset > 0){
+                return currentOffset - (PAGE_WIDTH)* (pages.length - 1);
+            }
+            return newOffset;
         })
     }
 
     const handleRightArrowClick = () => {
         setOffset((currentOffset) => {
-            const newOffset = currentOffset - PAGE_WIDTH;
-            const maxOffset = -(PAGE_WIDTH * (pages.length - 1));
-            return Math.max(newOffset, maxOffset);
+            const newOffset = currentOffset - (PAGE_WIDTH);
+            const maxOffset = -((PAGE_WIDTH) * (pages.length - 1));
+            if(newOffset < maxOffset){
+                return maxOffset + (PAGE_WIDTH) * (pages.length - 1);
+            }
+            return newOffset;
         })
+        setSwipe(!swipe)
     }
+
+    useEffect(() => {
+       setSwipe(!swipe)
+    }, [])
+
+    useEffect(() => {
+        setTimeout(
+          () =>
+            handleRightArrowClick()
+        ,6000
+        );
+    
+      }, [swipe]);
+
+    
 
     useEffect(() => {
         setPages(
@@ -41,7 +62,7 @@ export const DrinksCarousel = ({children}) =>  {
 
     return(
         <div className={s.carousel_container}>
-            <BiChevronLeftCircle size = '70' className={s.arrow} onClick={handleLeftArrowClick} />
+            <BiChevronLeftCircle size = '10' className={s.arrow} onClick={handleLeftArrowClick} />
             <div className={s.carousel_window}>
                 <div className={s.all_pages_container}
                 style={{
@@ -49,7 +70,7 @@ export const DrinksCarousel = ({children}) =>  {
                 }}>
                     {pages}</div>
             </div>
-            <BiChevronRightCircle size = '70' className={s.arrow} onClick={handleRightArrowClick} />
+            <BiChevronRightCircle size = '10' className={s.arrow} onClick={handleRightArrowClick} />
         </div>
     )
 }

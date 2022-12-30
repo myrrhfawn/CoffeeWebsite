@@ -5,9 +5,13 @@ class Drink(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     price = models.FloatField()
+    review = models.IntegerField(default=0)
+    rating = models.FloatField(default=0)
     image = models.ImageField(upload_to="photo/drinks/")
     is_available = models.BooleanField(default=True)
-    varts = models.ManyToManyField('Variety')
+    is_handpicked = models.BooleanField(default=False)
+    varieties = models.ManyToManyField('Variety')
+
 
     def __str__(self):
         return self.title
