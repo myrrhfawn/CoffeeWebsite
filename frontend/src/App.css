@@ -39,5 +39,14 @@
 .handpicked_order_container {
     margin: 0 auto;
     width: 100%;
-   
+    margin-bottom: 120px;
+}
+
+.trending_container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content {
+    height: 600px;
 }

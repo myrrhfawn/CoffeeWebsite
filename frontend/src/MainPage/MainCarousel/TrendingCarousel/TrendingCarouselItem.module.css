@@ -1,0 +1,43 @@
+.item_container {
+    width: 90%;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 2px 20px;
+}
+
+.item_image img {
+    width: 90%;
+
+}
+
+
+.item_content {
+    font-family: 'Montserrat', sans-serif;
+    color: #6F7378;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.item_title{
+    margin-bottom: 5px;
+}
+
+.item_price {
+    font-weight: 600;
+    color: #3EB489;
+    margin-bottom: 3px;
+
+}
+
+.item_rating_container {
+    display: flex;
+}
+
+.item_rating {
+    display: flex;
+    color: #FFBF00;
+    margin-right: 5px;
+}

@@ -5,7 +5,6 @@ import likesIcon from "../../images/likes_icon.png"
 import { AiOutlineHeart } from "react-icons/ai"
 
 export const HandpickedCarouselItem = ({drink}) => {
-    console.log(drink)
     const rating= [];
     for(var i = 0; i < drink.rating; i++ ){
         rating.push(true);
@@ -13,7 +12,6 @@ export const HandpickedCarouselItem = ({drink}) => {
     for(var i = 0; i < 5 - drink.rating; i++){
         rating.push(false);
     }
-    console.log(rating)
     return(
         <div className={s.item_container}>
             <div className={s.item_image}>
@@ -25,8 +23,8 @@ export const HandpickedCarouselItem = ({drink}) => {
                 <div className={s.item_rating_container}>
                     <div className={s.item_rating}>
                         {rating.map((rate, index) => {
-                            return (rate ? <div className={s.star}>★</div> : 
-                                <div className={s.star}>☆</div> )
+                            return (rate ? <div key={index} className={s.star}>★</div> : 
+                                <div key={index} className={s.star}>☆</div> )
                             }  
                         )}
                     </div>

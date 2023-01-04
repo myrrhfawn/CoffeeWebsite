@@ -40,7 +40,7 @@ function Handpicked({fetchData, handpicked}) {
                     <div className="handpicked_carousel_container">
                         <HandpickedCarousel>
                             {drinks.map((drink, index) => {
-                                return <div key={index} className="item">
+                                return <div key={index} className="handpicked_item">
                                         <HandpickedCarouselItem drink={drink[0]}/>
                                         <HandpickedCarouselItem drink={drink[1]}/>
                                     </div>

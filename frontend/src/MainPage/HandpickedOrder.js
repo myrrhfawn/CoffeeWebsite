@@ -6,7 +6,7 @@ function HandpickedOrder({fetchData, handpicked}) {
    
     return(
         <div className="handpicked_order_container">
-            <div className="handpicked_ordrder_image">
+            <div className="handpicked_order_image">
                 <img src={image} />
             </div>
             <div className="handpicked_order_content">

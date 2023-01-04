@@ -1,0 +1,52 @@
+.trending_product {
+    font-family: 'Montserrat', sans-serif;
+    color: #242424;
+    font-weight: 400;
+   
+}
+
+.trending_upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0  auto;
+}
+
+.trending_title {
+    display: flex;
+    font-size: 20px;
+}
+
+
+.trending_title_gray {
+    margin-right: 10px;
+}
+
+.trending_title_green {
+    color: #00A36C;
+    
+}
+
+.trending_all_products {
+    align-items: center;
+    text-align: center;
+}
+
+.trending_all_products:hover {
+    color: #00A36C;
+}
+
+.trending_item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.trending_carousel_container {
+    height: 100%;
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
