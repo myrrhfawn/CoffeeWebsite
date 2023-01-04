@@ -45,6 +45,14 @@
 .trending_container {
     margin: 0 auto;
     width: 100%;
+    margin-bottom: 100px;
+}
+
+.clients_tectimonial_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .content {

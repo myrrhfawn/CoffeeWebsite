@@ -6,7 +6,7 @@ import MainPageVarietiesCarousel from "./MainPage/MainPageVarietiesCarousel.js";
 import Handpicked from "./MainPage/Handpicked";
 import HandpickedOrder from "./MainPage/HandpickedOrder";
 import Trending from "./MainPage/Trending";
-
+import ClientsTestimonial from "./MainPage/ClientsTestimonial"
 
 
 function App() {
@@ -26,6 +26,9 @@ function App() {
           </div>
           <div className="trending_container">
             <Trending />
+          </div>
+          <div className="clients_tectimonial_container">
+            <ClientsTestimonial />
           </div>
           <div className="content">
             

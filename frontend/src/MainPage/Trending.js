@@ -33,13 +33,6 @@ function Trending({fetchData, trending}) {
                     {trending.map((drink, index) => {
                         return <div key={index} className="trending_item"><TrendingCarouselItem drink={drink} /></div>
                     })}
-
-                    {/*<div className="item"><TrendingCarouselItem /></div>
-                    <div className="item"><TrendingCarouselItem /></div>
-                    <div className="item"><TrendingCarouselItem /></div>
-                    <div className="item"><TrendingCarouselItem /></div>
-                    <div className="item"><TrendingCarouselItem /></div>
-                    <div className="item"><TrendingCarouselItem /></div>*/}
                 </TrendingCarousel>
             </div>
         </div>
