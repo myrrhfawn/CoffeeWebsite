@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .serializers import DrinkSerializer, VarietySerializer
+from .serializers import DrinkSerializer, VarietySerializer, ArticleSerializer
 
 from django.http import HttpResponse
 from .models import *
@@ -19,3 +19,6 @@ class HandpickedAPIView(generics.ListAPIView):
     queryset = Drink.objects.filter(is_handpicked=True)
     serializer_class = DrinkSerializer
 
+class ArticleAPIView(generics.ListAPIView):
+    queryset = Article.objects.filter(is_published=True)
+    serializer_class = ArticleSerializer

@@ -12,7 +12,6 @@ class Drink(models.Model):
     is_handpicked = models.BooleanField(default=False)
     varieties = models.ManyToManyField('Variety')
 
-
     def __str__(self):
         return self.title
 
@@ -20,6 +19,16 @@ class Variety(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to="photo/varts/")
     description = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+class Article(models.Model):
+    title = models.CharField(max_length=200)
+    image = image = models.ImageField(upload_to="photo/posts/")
+    text = models.TextField()
+    time_create = models.DateTimeField(auto_now_add=True)
+    is_published = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

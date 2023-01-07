@@ -53,7 +53,10 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
 }
+
+
 
 .content {
     height: 600px;

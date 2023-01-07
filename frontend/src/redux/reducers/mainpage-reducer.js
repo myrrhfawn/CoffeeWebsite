@@ -2,6 +2,7 @@
 const VARIETIES_FETCH_DATA_SUCCESS = "VARIETIES_FETCH_DATA_SUCCESS";
 const DRINKS_FETCH_DATA_SUCCESS = "DRINKS_FETCH_DATA_SUCCESS";
 const HANDPICKED_FETCH_DATA_SUCCESS = "HANDPICKED_FETCH_DATA_SUCCESS";
+const ARTICLES_FETCH_DATA_SUCCESS = "ARTICLES_FETCH_DATA_SUCCESS"
 
 const initialState = {
     "drinks":[{
@@ -75,8 +76,25 @@ const initialState = {
         "image": "123",
         "is_available": true,
         "varts": []
+    }],
+    "articles":[{
+        "title": "It is a long established fact that",
+        "image": "123",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. ",
+        "time_created": "19.10.2003",
+    },
+    {
+        "title": "It is a long established fact that",
+        "image": "123",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. ",
+        "time_created": "19.10.2003",
+    },
+    {
+        "title": "It is a long established fact that",
+        "image": "123",
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. ",
+        "time_created": "19.10.2003",
     }]
-   
 };
 
 export function mainPageReducer(state = initialState, action) {
@@ -96,6 +114,11 @@ export function mainPageReducer(state = initialState, action) {
                 ...state,
                 handpicked: action.handpicked
             }
+        case ARTICLES_FETCH_DATA_SUCCESS:
+            return {
+                ...state,
+                articles: action.articles
+            }    
         default:
             return state
     }
@@ -165,5 +188,28 @@ export function HandpickedFetchData(){
         })
         .then(response => response.json())
         .then(handpicked => dispatch(handpickedFetchDataSuccess(handpicked)))
+    }
+};
+
+
+export function articlesFetchDataSuccess(articles){
+    return {
+        type: ARTICLES_FETCH_DATA_SUCCESS,
+        articles
+    }
+};
+
+export function ArticlesFetchData(){
+    const url = "http://localhost:8000/api/articlelist/";
+    return (dispatch) => {
+        fetch(url)
+        .then(response => {
+            if(!response.ok){
+                throw new Error(response.statusText)
+            }
+            return response;
+        })
+        .then(response => response.json())
+        .then(articles => dispatch(articlesFetchDataSuccess(articles)))
     }
 };

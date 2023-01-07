@@ -1,0 +1,35 @@
+
+.featured_articles_text {
+    margin-bottom: 40px;
+
+}
+
+.featured_articles_title {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.featured_articles_title h1{
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: #242424;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+h1.featured_articles_title_green {
+    margin-left: 10px;
+    color: #00A36C;
+}
+
+
+.featured_articles_description  p{
+    font-family: 'Montserrat', sans-serif;
+    color: #6F7378;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0px;
+    text-align: center;
+}
+

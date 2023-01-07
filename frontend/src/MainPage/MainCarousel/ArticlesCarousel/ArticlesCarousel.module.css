@@ -1,0 +1,29 @@
+.carousel_container {
+    height: 100%;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.carousel_window {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.all_pages_container {
+    display: flex;
+    flex-direction: row;
+    transition: translate;
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.arrow {
+    cursor: pointer;
+    height: 60px;
+    color: #ABB0B8;
+}

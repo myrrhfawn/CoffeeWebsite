@@ -28,11 +28,11 @@ function Handpicked({fetchData, handpicked}) {
         <div className="handpicked_product">
             <div className="handpicked_text">
                 <div className="handpicked_title">
-                <h1 className="handpicked_title_gray">Handpicked</h1>
-                <h1 className="handpicked_title_green">Product</h1>
+                    <h1 className="handpicked_title_gray">Handpicked</h1>
+                    <h1 className="handpicked_title_green">Product</h1>
                 </div>
-                <div className="handpicked_text">
-                <p>Contrary to populary beliefs, Lorem then Choose a piece of classical</p>
+                <div className="handpicked_description">
+                    <p>Contrary to populary beliefs, Lorem then Choose a piece of classical</p>
                 </div>
             </div>   
             <div className="handpicked_block">

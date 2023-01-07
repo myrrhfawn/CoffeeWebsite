@@ -7,6 +7,7 @@ import Handpicked from "./MainPage/Handpicked";
 import HandpickedOrder from "./MainPage/HandpickedOrder";
 import Trending from "./MainPage/Trending";
 import ClientsTestimonial from "./MainPage/ClientsTestimonial"
+import FeaturedArticles from "./MainPage/FeaturedArticles";
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
           </div>
           <div className="clients_tectimonial_container">
             <ClientsTestimonial />
+          </div>
+          <div className="featured_articles_container">
+            <FeaturedArticles />
           </div>
           <div className="content">
             

@@ -13,3 +13,7 @@ class VarietySerializer(serializers.ModelSerializer):
         model = Drink
         fields = ('title', 'image', 'description')
 
+class ArticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Article
+        fields = ('title', 'image', 'text', 'time_create')

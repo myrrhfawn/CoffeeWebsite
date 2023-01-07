@@ -6,4 +6,5 @@ from .models import *
 
 admin.site.register(Drink)
 admin.site.register(Variety)
+admin.site.register(Article)
 
