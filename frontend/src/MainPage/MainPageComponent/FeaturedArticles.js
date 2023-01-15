@@ -3,7 +3,7 @@ import "./FeaturedArticles.css"
 import { ArticlesCarousel } from "./MainCarousel/ArticlesCarousel/ArticlesCarousel";
 import { ArticlesCarouselItem } from "./MainCarousel/ArticlesCarousel/ArticlesCarouselItem"
 import { connect } from "react-redux";
-import { ArticlesFetchData } from "../redux/reducers/mainpage-reducer";
+import { ArticlesFetchData } from "../../redux/reducers/mainpage-reducer";
 
 function FeaturedArticles({fetchData, articles}) {  
     const [rerender, setRerender] = useState(false);

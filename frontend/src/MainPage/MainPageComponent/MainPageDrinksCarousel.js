@@ -3,7 +3,7 @@ import {DrinksCarousel} from "./MainCarousel/DrinksCarousel/DrinksCarousel.js"
 import {DrinksCarouselItem} from "./MainCarousel/DrinksCarousel/DrinksCarouselItem.js"
 import "./MainPageDrinksCarousel.css"
 import { connect } from "react-redux";
-import { DrinksFetchData } from "../redux/reducers/mainpage-reducer";
+import { DrinksFetchData } from "../../redux/reducers/mainpage-reducer";
 
 
 function MainPageDrinksCarousel({fetchData, drinks}) {  

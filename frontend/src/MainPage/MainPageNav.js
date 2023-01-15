@@ -8,7 +8,7 @@ import "./MainPageNav.css"
 
 export default function MainPageNav() {
     return(
-        <nav>
+    <nav className="navbar">
         <div className="nav_upper">
             <div className="nav_search">
                 <input type="text" placeholder="Search product" />

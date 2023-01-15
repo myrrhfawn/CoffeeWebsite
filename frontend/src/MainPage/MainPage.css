@@ -1,0 +1,50 @@
+.main_page {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin-top: 5px;
+    width: 100%;
+    height: 100%; 
+    position: relative;
+}
+
+.top_transition {
+    position: absolute;
+    left: 0;
+    top: 100;
+    width: 100%;
+    transform: translate(0px, -99%);
+    user-select: none;
+}
+
+.main_page_content {
+    background-image: url("../images/white_background.png");
+    padding-bottom: 50px;
+   
+}
+
+
+.handpicked_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.handpicked_order_container {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+.trending_container {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.clients_tectimonial_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}

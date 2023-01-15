@@ -3,7 +3,7 @@ import "./Handpicked.css"
 import {HandpickedCarousel} from "./MainCarousel/HandpickedCarousel/HandpickedCarousel"
 import { HandpickedCarouselItem } from "./MainCarousel/HandpickedCarousel/HandpickedCarouselItem";
 import { connect } from "react-redux";
-import { HandpickedFetchData } from "../redux/reducers/mainpage-reducer";
+import { HandpickedFetchData } from "../../redux/reducers/mainpage-reducer";
 
 
 function Handpicked({fetchData, handpicked}) {  

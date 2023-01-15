@@ -3,7 +3,7 @@ import "./Trending.css"
 import { TrendingCarousel} from "./MainCarousel/TrendingCarousel/TrendingCarousel"
 import { TrendingCarouselItem } from "./MainCarousel/TrendingCarousel/TrendingCarouselItem";
 import { connect } from "react-redux";
-import { DrinksFetchData } from "../redux/reducers/mainpage-reducer";
+import { DrinksFetchData } from "../../redux/reducers/mainpage-reducer";
 
 
 function Trending({fetchData, trending}) {  

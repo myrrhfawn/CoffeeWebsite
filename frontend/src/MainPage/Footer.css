@@ -1,0 +1,147 @@
+footer {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+    background-image: url("./images/footer_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 120%;
+    padding-top: 300px;
+
+}
+
+.bottom_transition {
+    position: absolute;
+    left: 0;
+    bottom: 100;
+    width: 100%;
+    transform: translate(0px, -110%);
+    user-select: none;
+
+}
+
+.footer_logo img {
+    height: 45px;
+}
+
+.footer_content {
+    width: 88%;
+    color: #C5C5C5;
+    display: flex; 
+    margin: 0 auto;
+}
+
+.footer_content ul {
+    list-style: none;
+    padding: 0;
+    line-height: 35px;
+}
+
+.footer_info {
+    width: 24%;
+    margin-right: 70px;
+}
+
+.footer_quicks_links {
+    margin-right: 70px;
+}
+
+.footer_top_categories {
+    margin-right: 70px;
+}
+
+.footer_account {
+    margin-right: 70px;
+}
+
+
+.footer_text {
+    margin: 17px 0px 20px;
+}
+
+.footer_rating_title{
+    font-weight: 600;
+    color: white;
+
+    font-size: 16px;
+}
+
+.footer_rating {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    font-size: 20px;
+    color: #00A36C;
+    margin: 4px 0px 2px;
+    cursor: pointer;
+}
+
+.footer_rating_description {
+    display: flex;
+    
+}
+
+.footer_rating_green {
+    color: #00A36C; 
+    margin-right: 3px;
+}
+
+.footer_social {
+    margin: 30px 0px ;
+    cursor: pointer;
+
+}
+
+.footer_social a{
+    margin-right: 7px;
+}
+
+.footer_social_icon:hover {
+    color: #00A36C;
+    transition: .3s;
+
+}
+
+
+.footer_title {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.footer_content a:hover {
+    color: #00A36C;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.footer_copyright {
+    width: 88%;
+    border-top: solid #c5c5c549 2px;
+    padding: 15px 0px;
+    color: #C5C5C5;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_payments_icons {
+    display: flex;
+    
+}
+
+.payments_icon {
+    background-color: white;
+    border-radius: 4px;
+    margin-left: 5px;
+    width: 57px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.payments_icon img {
+    height:  35px;
+}

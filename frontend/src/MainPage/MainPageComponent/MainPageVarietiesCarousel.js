@@ -3,7 +3,7 @@ import {VarietiesCarousel} from "./MainCarousel/VarietiesCarousel/VarietiesCarou
 import {VarietiesCarouselItem} from "./MainCarousel/VarietiesCarousel/VarietiesCarouselItem.js"
 import "./MainPageVarietiesCarousel.css"
 import { connect } from "react-redux";
-import { VarietiesFetchData } from "../redux/reducers/mainpage-reducer";
+import { VarietiesFetchData } from "../../redux/reducers/mainpage-reducer";
 
 
 function MainPageVarietiesCarousel({fetchData, varieties}) {  
