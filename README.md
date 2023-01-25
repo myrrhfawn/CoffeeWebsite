@@ -5,4 +5,4 @@ In this project, I implement the backend part in Python using the Django framewo
 
 The site is in progress.
 
-![Image of site](https://imgur.com/a/xb20SRn)
+![Image of site]([https://imgur.com/a/xb20SRn](https://imgur.com/JGYPht4))
